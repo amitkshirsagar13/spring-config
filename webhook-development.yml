@@ -1,0 +1,12 @@
+info:
+  component: Webhook Service
+server:
+  hostname: localwebhook
+  port: 2222
+security:
+  basic:
+    enabled: true
+  user:
+    name: webhook
+    password: password
+    roles: ACTUATOR

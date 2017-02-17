@@ -1,0 +1,11 @@
+info:
+  component: Transform Service
+server:
+  hostname: localtransform
+  port: 3333
+security:
+  basic:
+    enabled: true
+  user:
+    name: transform
+    password: password

@@ -1,6 +1,43 @@
-# Common configuration
 eureka:
   instance:
     instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     statusPageUrlPath: ${server.context-path}/documentation/swagger-ui.html
     healthCheckUrlPath: ${server.context-path}/health
+
+management:
+  security:
+    enabled: false
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: WARN
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 4000
+      circuitBreaker:
+        requestVolumeThreshold: 4
+        errorThresholdPercentage: 50
+      metrics:
+        rollingStats:
+          timeInMilliseconds: 10000
+          numBuckets: 10
+  threadpool:
+    default:
+      coreSize: 4
+      maxQueueSize: 8
+      queueSizeRejectionThreshold: 5
