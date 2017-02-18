@@ -9,4 +9,3 @@ security:
   user:
     name: webhook
     password: password
-    roles: ACTUATOR

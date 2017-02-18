@@ -22,6 +22,9 @@ spring:
     config:
       discovery:
         enabled: true
+  user:
+    roles: ACTUATOR
+
 hystrix:
   command:
     default:
