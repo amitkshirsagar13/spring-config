@@ -1,7 +1,7 @@
 info:
   component: Zuul Service
 server:
-  hostname: localhystrix
+  hostname: localzuul
   port: 9999
 security:
   basic:
