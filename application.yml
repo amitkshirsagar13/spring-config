@@ -1,6 +1,6 @@
 eureka:
   instance:
-    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    instanceId: ${spring.application.name}:${server.hostname}:${server.port}
     statusPageUrlPath: ${server.context-path}/documentation/swagger-ui.html
     healthCheckUrlPath: ${server.context-path}/health
 
