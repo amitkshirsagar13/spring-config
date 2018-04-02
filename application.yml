@@ -1,5 +1,8 @@
 server:
   context-path: /
+security:
+  basic:
+    enabled: false
 management:
   context-path: /admin
   security:
