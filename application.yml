@@ -1,3 +1,8 @@
+management:
+  context-path: /admin
+  security:
+    enabled: false
+
 eureka:
   instance:
     instanceId: ${VHOSTNAME:${HOSTNAME:localhost.shinigami.io}}:${spring.application.name}:${spring.application.instance_id:${server.port}}
@@ -9,11 +14,6 @@ eureka:
     serviceUrl:
       defaultZone: http://${VEUREKAUSER:config}:${VEUREKAPASS:config}@${VEUREKAHOST:localhost.shinigami.io}:${VEUREKAPORT:8761}/registry/eureka
     enabled: true
-
-management:
-  security:
-    enabled: false
-
 endpoints:
   restart:
     enabled: true
