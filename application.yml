@@ -1,8 +1,9 @@
 eureka:
   instance:
-    instanceId: ${spring.application.name}:${server.hostname}:${server.port}
-    statusPageUrlPath: ${server.context-path}/documentation/swagger-ui.html
-    healthCheckUrlPath: ${server.context-path}/health
+    instanceId: ${VHOSTNAME:${HOSTNAME:localhost.shinigami.io}}:${spring.application.name}:${spring.application.instance_id:${server.port}}
+    statusPageUrlPath: ${server.context-path}${management.context-path}/info
+    healthCheckUrlPath: ${server.context-path}${management.context-path}/health
+    leaseRenewalIntervalInSeconds: 5
 
 management:
   security:
