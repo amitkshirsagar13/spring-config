@@ -11,6 +11,10 @@ eureka:
     statusPageUrlPath: ${server.context-path}${management.context-path}/info
     healthCheckUrlPath: ${server.context-path}${management.context-path}/health
     leaseRenewalIntervalInSeconds: 5
+    secure-port-enabled: true
+    secure-port: 443
+    non-secure-port-enabled: true
+    non-secure-port: 80
   client:
     region: default
     serviceUrl:
