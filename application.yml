@@ -1,3 +1,5 @@
+server:
+  context-path: /
 management:
   context-path: /admin
   security:
