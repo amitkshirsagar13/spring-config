@@ -1,6 +1,0 @@
-eureka:
-  instance:
-    leaseRenewalIntervalInSeconds: 5
-  client:
-    serviceUrl:
-      defaultZone: http://eurekaconfig:s3cr3tpassword@localeureka:8761/eureka/
