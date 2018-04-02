@@ -15,6 +15,7 @@ eureka:
     secure-port: 443
     non-secure-port-enabled: true
     non-secure-port: 80
+    hostname: ${VHOSTNAME:${HOSTNAME:localhost.shinigami.io}}
   client:
     region: default
     serviceUrl:
