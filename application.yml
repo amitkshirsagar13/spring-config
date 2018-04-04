@@ -14,8 +14,10 @@ eureka:
     statusPageUrlPath: ${server.context-path}${management.context-path}/info
     healthCheckUrlPath: ${server.context-path}${management.context-path}/health
     leaseRenewalIntervalInSeconds: 5
-    hostname: ${VSERVICEHOST:${spring.application.name:${VHOSTNAME:${HOSTNAME:localhost.shinigami.io}}}}
-    secure-port-enabled: false
+    secure-virtual-host-name: ${VSERVICEHOST:${spring.application.name:${VHOSTNAME:${HOSTNAME:localhost.shinigami.io}}}}
+    virtual-host-name: ${VSERVICEHOST:${spring.application.name:${VHOSTNAME:${HOSTNAME:localhost.shinigami.io}}}}
+    hostname: ${VHOSTNAME:${HOSTNAME:localhost.shinigami.io}}
+    secure-port-enabled: true
     secure-port: ${VSECUREPORT:${server.port}}
     non-secure-port-enabled: true
     non-secure-port: ${VNONSECUREPORT:${server.port}}
