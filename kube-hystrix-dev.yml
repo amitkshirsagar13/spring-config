@@ -1,7 +1,7 @@
 info:
-  component: Hystrix Turbine Dashboard
+  component: Hystrix Turbine Dashboard - ${HOSTNAME:localhost.shinigami.io}
 server:
-  hostname: ${VHOSTNAME:localhost.shinigami.io}
+  hostname: ${VHOSTNAME:${HOSTNAME:localhost.shinigami.io}}
   port: 1234
 security:
   basic:
